@@ -142,10 +142,10 @@ def angle_sight():  # 미사일-목표 각도
         x += np.pi
         y = np.pi / 2 - y
 
-    if d[2] < 0:
-        if y <= -np.pi:
-            x += np.pi
-            y = -(y + np.pi)
+    #if d[-1] > d[-2]:
+     #   if y <= -np.pi:
+     #       x += np.pi
+      #      y = -(y + np.pi)
 
     if x < 0:
         x += np.pi * 2
