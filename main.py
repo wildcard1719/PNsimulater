@@ -38,7 +38,7 @@ der = [0, 0, 0]
 i = 0
 j = 0
 
-ii = 5
+ii = 3
 jj = 0
 
 Ab = [0, 0]
@@ -142,7 +142,7 @@ def angle_sight():  # 미사일-목표 각도
         x += np.pi
         y = np.pi / 2 - y
 
-    if d[-1] > d[-2]:
+    if d[2] < 0:
         if y <= -np.pi:
             x += np.pi
             y = -(y + np.pi)
@@ -199,7 +199,6 @@ while distanceT() > 2:  # 충돌할때까지 반복
         if Ma_x >= (np.pi * 2):
             Ma_x = Ma_x % (np.pi * 2)
 
-    if i == ii:
         Ab = angle_sight()
         i = 0
 
